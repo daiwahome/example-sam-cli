@@ -12,7 +12,6 @@ clean: ## Clean build directory
 
 build: ## Build Lambda functions
 	mkdir -p build
-	GOOS=linux GOARCH=amd64 go build -o $(BUILD_DIR)/hello-world ./hello-world
 	GOOS=linux GOARCH=amd64 go build -o $(BUILD_DIR)/user ./user
 
 migrate: ## Create table and put data to DynamoDB Local
